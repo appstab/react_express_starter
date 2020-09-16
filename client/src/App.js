@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import './App.css';
-import Customer from './pages/customer';
-import Home from './pages/home';
+import DogPage from './pages/dogPage';
+import BreedsPage from './pages/breedsPage';
 import ErrorHandler from './components/errorHandler';
-
 
 class App extends Component {
   render() {
@@ -12,8 +11,8 @@ class App extends Component {
         <BrowserRouter>
           <ErrorHandler> 
             <Switch>
-              <Route exact path="/" component={Home} />
-              <Route exact path="/customer/:customerId/" component={Customer} />
+              <Route exact path="/" component={BreedsPage} />
+              <Route exact path="/breed/:breedName/" component={DogPage} />
               {/* <Route component={Page404} /> */}
             </Switch>
           </ErrorHandler>
