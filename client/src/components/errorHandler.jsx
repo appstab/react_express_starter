@@ -54,7 +54,7 @@ const ErrorHandler = ({ children }) => {
 
 // A custom hook to quickly read the context's value. It's
 // only here to allow quick imports
-const useErrorStatus = () => React.useContext(ErrorStatusContext);
+export const useErrorStatus = () => React.useContext(ErrorStatusContext);
 
 
 export default ErrorHandler;
